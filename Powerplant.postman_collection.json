@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "bc4c2cbf-eafe-424a-ad86-59484c182e70",
+		"name": "Powerplant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22958594"
+	},
+	"item": [
+		{
+			"name": "Add Batteries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Battery A\",\r\n        \"postcode\": \"2000\",\r\n        \"wattCapacity\": 100\r\n    },\r\n    {\r\n        \"name\": \"Battery B\",\r\n        \"postcode\": \"3000\",\r\n        \"wattCapacity\": 200\r\n    },\r\n    {\r\n        \"name\": \"Battery C\",\r\n        \"postcode\": \"2500\",\r\n        \"wattCapacity\": 150\r\n    }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/batteries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"batteries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Batteries by Postcode Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/batteries/statistics?startPostcode=2000&endPostcode=3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"batteries",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "startPostcode",
+							"value": "2000"
+						},
+						{
+							"key": "endPostcode",
+							"value": "3000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
