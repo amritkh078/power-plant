@@ -15,4 +15,5 @@ Inside `src/main/resources`, rename `example.properties` to `application.propert
 ## API Reference
 
 Postman collection is attached along with the code.
+Import the file into any of your API testing tools.
 
